@@ -27,5 +27,7 @@ cat slam-clock.tar.gz | (cd / && tar xvfz -)
 /usr/local/sbin/slam-clock.sh stop
 
 # enable the systemd service goop
+systemctl disable fake-hwclock
+systemctl disable hwclock
 systemctl enable slam-clock
 systemctl start slam-clock
